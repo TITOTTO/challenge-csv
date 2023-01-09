@@ -1,0 +1,23 @@
+<h2> Ambassade </h2><%= link_to "Créer un Ambassage", new_embassy_path %>
+<div class="table-responsive">
+  <table class="table table-striped table-sm">
+    <thead>
+      <tr>
+        <th scope="col">Pays (Fr)</th>
+        <th scope="col">Latitude</th>
+        <th scope="col">Longitude</th>
+        <th scope="col">Coordonnées</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @embassies.each do |embassy|%>
+      <tr>
+        <td><%= link_to embassy.country.country_fr, embassy_path(embassy)%></td>
+        <td><%= embassy.latitude%></td>
+        <td><%= embassy.longitude%></td>
+        <td><%= embassy.contact%></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

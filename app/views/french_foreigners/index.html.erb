@@ -1,0 +1,21 @@
+<h2>Français à l'étranger</h2><%= link_to "Créer un recensement", new_french_foreigner_path %>
+<div class="table-responsive">
+  <table class="table table-striped table-sm">
+    <thead>
+      <tr>
+        <th scope="col">Pays (Fr)</th>
+        <th scope="col">Année</th>
+        <th scope="col">Nombre de Français</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @french_foreigners.each do |french_foreigner| %>
+      <tr>
+        <td><%= french_foreigner.country.country_fr %></td>
+        <td><%= french_foreigner.year%></td>
+        <td><%= french_foreigner.nbr_fr%></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

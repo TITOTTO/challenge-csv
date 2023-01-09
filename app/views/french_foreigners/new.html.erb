@@ -1,0 +1,11 @@
+<%= form_with model: @french_foreigner do |form| %>
+  <%= form.label :year, "Année" %>
+  <%= form.text_field :year %> <br>
+  
+  <%= form.label :nbr_fr, "Nombre de français" %>
+  <%= form.text_field :nbr_fr %> <br>
+
+  <%= form.collection_select :country_id, @countries, :id, :country_fr, include_blank: true %>
+  <br>
+  <%= form.submit "Créer" %>
+<% end %>

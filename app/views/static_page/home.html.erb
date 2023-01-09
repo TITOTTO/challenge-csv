@@ -1,0 +1,23 @@
+<h2>Liste des pays</h2>
+<div class="table-responsive">
+  <table class="table table-striped table-sm">
+    <thead>
+      <tr>
+        <th scope="col">Pays (Fr)</th>
+        <th scope="col">Pays (En)</th>
+        <th scope="col">Iso Numérique</th>
+        <th scope="col">Iso Alpha 2</th>
+        <th scope="col">Iso Alpha 3</th>
+        <th scope="col">Bâtiment</th>
+        <th scope="col">Latitude</th>
+        <th scope="col">Longitude</th>
+        <th scope="col">Coordonnées</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @countries.each do |country| %>
+        <%= render partial: 'home', locals: {country: country} %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
