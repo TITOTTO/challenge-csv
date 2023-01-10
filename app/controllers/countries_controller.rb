@@ -19,7 +19,7 @@ class CountriesController < ApplicationController
     @country = Country.new(country_params)
     @country.save
     if @country.errors.empty?
-      flash.success = "Pays créé"
+      flash[:success] = "Pays créé"
       redirect_to country_path(@country)
     else
       flash[:notice] = country_errors
@@ -31,7 +31,7 @@ class CountriesController < ApplicationController
   def update
     @country.update(country_params)
     if @country.errors.empty?
-      flash.success = "Pays modifié"
+      flash[:success] = "Pays modifié"
     else
       flash[:notice] = country_errors
     end
@@ -42,7 +42,7 @@ class CountriesController < ApplicationController
   def destroy
     @country.destroy
     if @country.errors.empty?
-      flash.success = "Pays supprimé"
+      flash[:success] = "Pays supprimé"
     else
       flash[:notice] = country_errors
     end

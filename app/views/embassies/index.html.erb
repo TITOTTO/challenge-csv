@@ -7,17 +7,11 @@
         <th scope="col">Latitude</th>
         <th scope="col">Longitude</th>
         <th scope="col">Coordonnées</th>
+        <th scope="col">Actions</th>
       </tr>
     </thead>
     <tbody>
-    <% @embassies.each do |embassy|%>
-      <tr>
-        <td><%= link_to embassy.country.country_fr, embassy_path(embassy)%></td>
-        <td><%= embassy.latitude%></td>
-        <td><%= embassy.longitude%></td>
-        <td><%= embassy.contact%></td>
-      </tr>
-    <% end %>
+      <%= render @embassies %>
     </tbody>
   </table>
 </div>

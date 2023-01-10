@@ -1,0 +1,19 @@
+<%= form_with model: @country do |form| %>
+  <%= form.label :country_fr, "Pays en français" %>
+  <%= form.text_field :country_fr %> <br>
+  
+  <%= form.label :country_en, "Pays en anglais" %>
+  <%= form.text_field :country_en %> <br>
+
+  <%= form.label :iso_numerical, "Iso Numérique" %>
+  <%= form.text_field :iso_numerical %> <br>
+
+  <%= form.label :iso_alpha2, "Iso Alpha 2" %>
+  <%= form.text_field :iso_alpha2 %> <br>
+
+  <%= form.label :iso_alpla3, "Iso Alpha 3" %>
+  <%= form.text_field :iso_alpha3 %> <br>
+
+
+  <%= form.submit "Modifier" %>
+<% end %>

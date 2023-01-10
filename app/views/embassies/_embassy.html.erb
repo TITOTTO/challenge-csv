@@ -1,0 +1,10 @@
+<tr>
+  <td><%= link_to embassy.country.country_fr, embassy_path(embassy)%></td>
+  <td><%= embassy.latitude%></td>
+  <td><%= embassy.longitude%></td>
+  <td><%= embassy.contact%></td>
+  <td>
+    <%= link_to "Modifier l'ambassade", edit_embassy_path(embassy) %>
+    <%= button_to "Supprimer l'ambassade", embassy_path(embassy), method: :delete, data: { confirm: "Êtes-vous sur ?" } %>
+  </td>
+</tr>
