@@ -6,16 +6,11 @@
         <th scope="col">Pays (Fr)</th>
         <th scope="col">Année</th>
         <th scope="col">Nombre de Français</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
-    <% @french_foreigners.each do |french_foreigner| %>
-      <tr>
-        <td><%= french_foreigner.country.country_fr %></td>
-        <td><%= french_foreigner.year%></td>
-        <td><%= french_foreigner.nbr_fr%></td>
-      </tr>
-    <% end %>
+      <%= render @french_foreigners %>
     </tbody>
   </table>
 </div>

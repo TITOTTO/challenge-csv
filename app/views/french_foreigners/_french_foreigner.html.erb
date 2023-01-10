@@ -1,0 +1,9 @@
+<tr>
+  <td><%= french_foreigner.country.country_fr %></td>
+  <td><%= french_foreigner.year%></td>
+  <td><%= french_foreigner.nbr_fr%></td>
+  <td>
+    <%= link_to "Modifier le recensement", edit_french_foreigner_path(french_foreigner) %>
+    <%= button_to "Supprimer le recensement", french_foreigner_path(french_foreigner), method: :delete, data: { confirm: "Êtes-vous sur ?" } %>
+  </td>
+</tr>
