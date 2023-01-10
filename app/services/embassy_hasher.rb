@@ -15,9 +15,9 @@ class EmbassyHasher
 
   def data_hasher
     read_data.each do |embassy|
-      key = embassy.delete_at(1).split.first.parameterize.capitalize()
+      country_fr = embassy.delete_at(1).split.first.parameterize.capitalize()
       next if key == "Pays"
-      hashed_data[key] = embassy
+      hashed_data[country_fr] = embassy
     end
     hashed_data
   end

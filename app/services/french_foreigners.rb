@@ -14,10 +14,10 @@ class FrenchForeigners
   private
 
   def data_array
-    read_data.each do |embassy|
-      next if embassy.first == "Pays"
-      embassy[0] = embassy.first.parameterize.capitalize()
-      array_data << embassy
+    read_data.each do |french_foreigners_data|
+      next if french_foreigners_data.first == "Pays"
+      french_foreigners_data[0] = french_foreigners_data.first.parameterize.capitalize()
+      array_data << french_foreigners_data
     end
     array_data
   end
