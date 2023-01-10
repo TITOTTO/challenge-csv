@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :countries, only: [:index, :show, :new, :create]
-  resources :embassies, only: [:index, :show, :new, :create]
-  resources :french_foreigners, only: [:index, :show, :new, :create]
+  resources :countries
+  resources :embassies
+  resources :french_foreigners
   root to: "static_page#home"
 
 end

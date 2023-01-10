@@ -5,5 +5,9 @@
         <td><%= country.iso_numerical%></td>
         <td><%= country.iso_alpha2%></td>
         <td><%= country.iso_alpha3%></td>
+        <td>
+          <%= link_to "Modifier le pays", edit_country_path(country) %>
+          <%= button_to "Supprimer le pays", country_path(country), method: :delete, data: { confirm: "Êtes-vous sur ?" } %>
+        </td>
       </tr>
 </tbody>
